@@ -29,7 +29,7 @@
 
 在已经存在的目录中创建hexo项目
 123$ cd 项目路径$ hexo init$ npm">
-<meta property="og:updated_time" content="2015-09-16T14:32:55.000Z">
+<meta property="og:updated_time" content="2015-09-16T14:46:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo在github上搭建web">
 <meta name="twitter:description" content="快速上手环境准备1. node &amp;amp; npm2. git3. hexo 安装方法：npm install -g hexo
@@ -105,7 +105,7 @@
 		<a href="/about" title="Yao Yong" target="_blank" itemprop="author">Yao Yong</a>
 		
   <p class="article-time">
-    <time datetime="2015-09-16T14:32:55.000Z" itemprop="datePublished"> 发表于 2015-09-16</time>
+    <time datetime="2015-09-16T14:46:14.000Z" itemprop="datePublished"> 发表于 2015-09-16</time>
     
   </p>
 </header>
@@ -175,7 +175,8 @@
 <p>默认运行在<code>0.0.0.0:400</code>，可以指定ip和端口<code>$ hexo server -p 8080 -i 192.168.1.1</code></p>
 <h3 id="生成文件">生成文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <h3 id="部署到github">部署到github</h3><p>先要在_config.yml中修改配置，然后在运行一下命令。<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/madeinlife/madeinlife.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>注意：先要创建好<code>repository</code>，然后用<code>ssh</code>或<code>https</code>方式发布到github,上面用的是https方式，如果git没有配置用户信息，发布的时候会提示输入用户名和密码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate <span class="comment">#先要生成精通文件然后再发布</span></span><br><span class="line">$ hexo deploy <span class="comment">#两个命令可以合并：hexo generate --deploy 或者 hexo deploy --generate</span></span><br></pre></td></tr></table></figure></p>
+<p><code>注意:</code><br><code>1.</code>发布以前，先要安装<code>hexo-deployer-git</code>,如果未安装会出现:<code>ERROR Deployer not found: git</code>.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--saver</span></span></span><br></pre></td></tr></table></figure></p>
+<p><code>2.</code>先要创建好<code>repository</code>，然后用<code>ssh</code>或<code>https</code>方式发布到github,上面用的是https方式，如果git没有配置用户信息，发布的时候会提示输入用户名和密码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate <span class="comment">#先要生成精通文件然后再发布</span></span><br><span class="line">$ hexo deploy <span class="comment">#两个命令可以合并：hexo generate --deploy 或者 hexo deploy --generate</span></span><br></pre></td></tr></table></figure></p>
 <p><code>说明：</code>这个是简明的使用，在实际过程中可能会遇到一些细节问题，根据问题再查找其它相关资料即可。</p>
 <h2 id="参考资料"><strong>参考资料</strong></h2><blockquote>
 <ul>
@@ -256,8 +257,6 @@
 		
 			
 				<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
-			
-		
 			
 		
 		</ul>
